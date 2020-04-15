@@ -1,0 +1,33 @@
+bot.on('message', message=>{
+
+    let args = message.content.substring(PREFIX.length).split(" ");
+
+    switch(args[0]){
+        case 'ping':
+            message.channel.send(`🏓 Isn't it great weather for ping-ponging?`);
+            break;
+        case 'stockford':
+            Bot.on('message' , function (message){
+                if (message.content == '!roll') 
+                {
+                    var roll =(Math.floor(Math.random()*200)+1);
+                    if (roll == 1)
+                    {
+                        message.reply('Hello kidlets! Is my mic working?');
+                    }
+                    if (roll == 2) 
+                    {
+                        message.reply('Alright! Get to class and stop the chatter! The bell has rung!');
+                    }
+                    if (roll == 3) 
+                    {
+                        message.reply('My little chemists! I have a little surprise for you! Smell this.');
+                    }
+                    else
+                    {
+                        message.reply('test');
+                    }
+                } 
+        break;   
+    }
+});
